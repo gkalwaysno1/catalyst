@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catalyst</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/logo1.png">
+    <style>
+        #form1 {
+
+            background-color: rgb(105, 207, 230);
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+        img {
+            height: 5cm;
+            width: 5cm;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        form {
+            size-adjust: 20cm;
+            display: inline-block;
+        }
+
+        #t1 {
+            width: 390px;
+            background-color: rgb(92, 217, 136);
+        }
+
+        #hi {
+            border-radius: 5px;
+            width: 400px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body background="../Assets/pexels-simon-berger-1323550.jpg">
+
+
+
+    <center>
+        <div id="gkimg">
+            <img src="../Assets/logo.png" style="width: max-content;height:max-content" alt src="">
+        </div>
+        <div id="form1">
+            <form action="../api/login.php" method="post">
+                <center>
+                    <h1 id="first" style="color: rgb(76, 15, 138);">
+                        <marquee>Welcome to CATALYST</marquee>
+                    </h1>
+                </center>
+                <h1 style="color:purple">SIGN IN</h1>
+                <table border="6">
+                    <th><input type="text" name="username" id="email" placeholder="USERNAME/Email" size="50px"
+                            required /></th>
+                </table>
+                <table border="6">
+                    <th><input type="password" name="password" id="password" placeholder="Password" size="50px"
+                            required /></th>
+                </table><br>
+                <input type="submit" name="loginbtn" value="LOGIN" id="hi"
+                    style="background-color:rgb(76, 245, 110);color: rgb(225, 42, 42);">
+            </form><BR><BR>
+                <form action="registration/register.html">
+                    <h3>
+                        <MARquee>
+                            New to Lock up?
+                        </MARquee>
+                    </h3>
+                    <input type="submit" name="loginbtn" value="REGISTER" id="hi" style="background-color:rgb(76, 245, 110);color: rgb(225, 42, 42);" onsubmit="registration/register.html">
+                </form>
+
+        </div>
+    </center>
+</body>
+<!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+        import { getAuth,  createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyB4ayKAVSkw-WdOXlDspLeteHMeOJfs8ME",
+            authDomain: "catalyst-7e840.firebaseapp.com",
+            projectId: "catalyst-7e840",
+            storageBucket: "catalyst-7e840.appspot.com",
+            messagingSenderId: "1047184756820",
+            appId: "1:1047184756820:web:7552339d31690de8439dc1",
+            measurementId: "G-S7CWPMPQVZ"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth=getAuth();
+
+        
+
+        document.getElementById("hi").addEventListener("click",function(){
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+            signInWithEmailAndPassword(auth,email,password)
+            .then((userCredential)=>{
+                const user=userCredential.user;
+                console.log(user);
+                alert(user.email+" login successfully!!!");
+                document.getElementById('Logout').style.display='block';
+            })
+            .catch((error)=>{
+                const errorCode=error.code;
+                const errorMessage=error.message;
+                console.log(errorMessage);
+                alert(errorMessage);
+            });
+        });
+
+        console.log(app);
+      </script> -->
+
+</html>
